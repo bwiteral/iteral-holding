@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Iteral</title>
+  <link rel="icon" type="image/svg+xml" href="iteral-monogram.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400&family=DM+Mono:wght@300&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy:    #191D23;
+      --charcoal:#2D2D2D;
+      --electric:#009DDC;
+      --sky:     #E8F2F9;
+      --muted:   #5a6472;
+      --rule:    #cddce8;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { height: 100%; }
+
+    body {
+      background-color: var(--sky);
+      color: var(--navy);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 300;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    .top-rule {
+      width: 100%;
+      height: 3px;
+      background: var(--navy);
+      flex-shrink: 0;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 4rem 2rem;
+      max-width: 640px;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+
+    h1 {
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 300;
+      font-size: clamp(2.8rem, 8vw, 5rem);
+      line-height: 1;
+      letter-spacing: -0.03em;
+      color: var(--navy);
+      margin-bottom: 2rem;
+      opacity: 0;
+      animation: fadeUp 0.6s ease forwards 0.3s;
+    }
+
+    .divider {
+      width: 32px;
+      height: 1px;
+      background: var(--rule);
+      margin-bottom: 1.75rem;
+      opacity: 0;
+      animation: fadeUp 0.5s ease forwards 0.45s;
+    }
+
+    .description {
+      font-size: 0.9rem;
+      line-height: 1.75;
+      color: var(--muted);
+      max-width: 380px;
+      opacity: 0;
+      animation: fadeUp 0.5s ease forwards 0.55s;
+    }
+
+    .description strong {
+      color: var(--charcoal);
+      font-weight: 400;
+    }
+
+    .contact {
+      margin-top: 2.75rem;
+      padding-top: 1.75rem;
+      border-top: 1px solid var(--rule);
+      opacity: 0;
+      animation: fadeUp 0.5s ease forwards 0.7s;
+    }
+
+    .contact-label {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.62rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 0.5rem;
+    }
+
+    .contact a {
+      font-size: 0.9rem;
+      color: var(--electric);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      padding-bottom: 1px;
+      transition: border-color 0.2s ease;
+    }
+
+    .contact a:hover {
+      border-color: var(--electric);
+    }
+
+    footer {
+      padding: 1.5rem 2rem;
+      max-width: 640px;
+      margin: 0 auto;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      opacity: 0;
+      animation: fadeUp 0.4s ease forwards 0.85s;
+    }
+
+    .footer-mark {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.62rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(10px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 480px) {
+      main { padding: 3rem 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="top-rule"></div>
+
+  <main>
+
+    <h1>iteral</h1>
+    <div class="divider"></div>
+    <p class="description">
+      <strong>Fractional CFO services</strong> for early-stage and growth-stage companies.
+      Strategic financial leadership without the full-time overhead.
+      Based in Sydney.
+    </p>
+    <div class="contact">
+      <p class="contact-label">Get in touch</p>
+      <a href="mailto:ben@iteral.co">ben@iteral.co</a>
+    </div>
+  </main>
+
+  <footer>
+    <span class="footer-mark">© 2026 Iteral</span>
+
+  </footer>
+</body>
+</html>
